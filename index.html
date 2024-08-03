@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe editor</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      color: #333;
+      padding: 3rem;
+    }
+
+    .ingredientsList {
+      list-style-type: none;
+      padding: 0;
+      line-height: 2em;
+    }
+
+    .ingredientsList .quantity {
+      font-weight: bold;
+    }
+
+    .ingredientsList .controls {
+      display: none;
+    }
+
+    .ingredientsList li:hover {
+      background-color: #f2f2f2;
+    }
+
+    .ingredientsList li:hover .controls {
+      display: inline;
+    }
+
+    .form {
+      margin-bottom: 2rem;
+    }
+
+    .formRow {
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+      margin: 1em 0;
+    }
+
+    .formRow p {
+      margin: 0;
+    }
+
+    .formRow label {
+      display: block;
+    }
+    .formRow span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Recipe editor</h1>
+
+<h2>Ingredients for 1 serving</h2>
+
+<ul class="ingredientsList">
+  <li>
+    <span class="quantity">260ml</span> lukewarm water
+    <span class="controls">
+      <button>edit</button>
+      <button>delete</button>
+    </span>
+  </li>
+  <li>
+    <span class="quantity">50ml</span> olive oil
+    <span class="controls">
+      <button>edit</button>
+      <button>delete</button>
+    </span>
+  </li>
+  <li>
+    <span class="quantity">500g</span> flour
+    <span class="controls">
+      <button>edit</button>
+      <button>delete</button>
+    </span>
+  </li>
+  <li>
+    <span class="quantity">10g</span> salt
+    <span class="controls">
+      <button>edit</button>
+      <button>delete</button>
+    </span>
+  </li>
+</ul>
+
+<div class="form">
+  <div class="formRow">
+    <p>
+      <label>
+        <span>Qty.</span>
+        <input type="text" size="4">
+      </label>
+    </p>
+    <p>
+      <label>
+        <span>Unit</span>
+        <input type="text" size="4">
+      </label>
+    </p>
+    <p>
+      <label>
+        <span>Ingredient</span>
+        <input type="text" size="30">
+      </label>
+    </p>
+  </div>
+  <div class="formControls">
+    <button>Add ingredient</button>
+  </div>
+</div>
+
+<h2>Ingredients for 4 servings</h2>
+
+<div class="form">
+  <div class="formRow">
+    <p>
+      <label>
+        <span>Servings</span>
+        <input type="text" size="4" value="4">
+      </label>
+    </p>
+  </div>
+  <div class="formControls">
+    <button>Calculate</button>
+  </div>
+</div>
+
+<ul class="ingredientsList">
+  <li>
+    <span class="quantity">1040ml</span> lukewarm water
+  </li>
+  <li>
+    <span class="quantity">200ml</span> olive oil
+  </li>
+  <li>
+    <span class="quantity">2000g</span> flour
+  </li>
+  <li>
+    <span class="quantity">40g</span> salt
+  </li>
+</ul>
+
+</body>
+</html>
